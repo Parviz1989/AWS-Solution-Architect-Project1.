@@ -1,0 +1,144 @@
+Step 1: Create an AWS Account
+Go to the AWS Sign-Up page and create a new AWS account.
+Follow the instructions to fill in the necessary information.
+
+#########################################################################################################
+
+
+Step 2: Explore the AWS Free Tier
+Once your AWS account is set up, explore the AWS Free Tier to understand the services available without incurring costs.
+Familiarize yourself with the limitations and duration of the Free Tier.
+
+#########################################################################################################
+
+Step 3: Launch Your First EC2 Instance
+Access the AWS Management Console.
+Navigate to the EC2 service.
+Launch an EC2 instance using the "Launch Instance" button.
+Choose an Amazon Machine Image (AMI), configure instance details, add storage, configure security groups, and review before launching.
+Create a key pair for SSH access.
+
+
+
+Main Details in Step 3
+Access AWS Management Console:
+
+Go to the AWS Management Console.
+Log in with the AWS account credentials you created in Step 1.
+Navigate to EC2 Service:
+
+In the AWS Management Console, locate and click on the "Services" dropdown.
+Under "Compute," click on "EC2" to access the EC2 Dashboard.
+Launch an EC2 Instance:
+
+On the EC2 Dashboard, click the "Launch Instance" button.
+Choose an Amazon Machine Image (AMI):
+
+In the "Choose an Amazon Machine Image (AMI)" step, select an AMI. For beginners, you can choose the "Amazon Linux 2 AMI" which is a common choice.
+Choose an Instance Type:
+
+In the "Choose an Instance Type" step, select an instance type. For this project, you can choose a general-purpose instance like "t2.micro," which is eligible for the Free Tier.
+Configure Instance Details:
+
+In the "Configure Instance Details" step:
+Set the number of instances to 1.
+You can leave other settings as default for this basic setup.
+Add Storage:
+
+In the "Add Storage" step, configure the storage settings for your instance.
+You can leave the default settings for this basic setup.
+Add Tags (Optional):
+
+In the "Add Tags" step, you can add tags to your instance for better organization. Tags are key-value pairs.
+Configure Security Group:
+
+In the "Configure Security Group" step:
+Create a new security group or use an existing one.
+Open port 22 (SSH) to allow incoming connections for remote access.
+Review Instance Launch:
+
+Review your configuration in the "Review Instance Launch" step.
+Ensure everything looks correct.
+Create a Key Pair:
+
+In the "Review Instance Launch" step, you'll need to create a key pair if you don't have one.
+Choose "Create a new key pair," give it a name, and download the private key file (.pem).
+Launch Instance:
+
+After creating the key pair, click the "Launch" button.
+A confirmation dialog will appear; select the key pair you just created and click "Launch Instances."
+View Instances:
+
+Go back to the EC2 Dashboard and click on "Instances" in the left navigation pane to view your running instance.
+
+#########################################################################################################
+
+Step 4: Connect to Your EC2 Instance
+Once the EC2 instance is running, connect to it using SSH.
+Use the key pair you created during the instance launch.
+Access your instance's public IP address.
+
+
+
+Step 4: Connect to Your EC2 Instance
+Access AWS Management Console:
+
+Go to the AWS Management Console.
+Log in with the AWS account credentials.
+Navigate to EC2 Dashboard:
+
+In the AWS Management Console, click on "Services" and then select "EC2" under "Compute."
+View Running Instances:
+
+In the EC2 Dashboard, click on "Instances" in the left navigation pane to view your running instance.
+Get Public IP Address:
+
+Identify your running EC2 instance in the list.
+Note the "IPv4 Public IP" address. This is the address you will use to connect to the instance.
+Connect via SSH:
+
+Open your terminal or command prompt on your local machine.
+
+Use the following SSH command to connect to your EC2 instance. Replace <your-key.pem> with the path to the private key file you downloaded during the instance launch, and <your-instance-ip> with the IPv4 Public IP address of your instance:
+
+bash
+Copy code
+ssh -i <your-key.pem> ec2-user@<your-instance-ip>
+Example:
+
+bash
+Copy code
+ssh -i ~/Downloads/your-key.pem ec2-user@123.456.789.012
+If you're using a Windows machine, you can use a tool like PuTTY to connect via SSH.
+
+
+Confirm Connection:
+
+You may be prompted to confirm the connection. Type "yes" and press Enter.
+Connected to EC2 Instance:
+
+You are now connected to your EC2 instance. You should see the command prompt of your instance.
+
+Note: The user might vary based on the AMI you selected; for the "Amazon Linux 2 AMI," the default user is often "ec2-user."
+
+#########################################################################################################
+
+
+Step 5: Explore the AWS Management Console
+Familiarize yourself with the AWS Management Console.
+Navigate through different services and understand their purposes.
+
+#########################################################################################################
+
+
+Step 6: Explore Additional AWS Services
+Take a quick look at services like S3 (Simple Storage Service), RDS (Relational Database Service), and IAM (Identity and Access Management).
+
+#########################################################################################################
+
+
+Step 7: Documentation and Help
+Utilize the AWS Documentation for reference.
+Explore AWS forums and community resources for assistance.
+
+#########################################################################################################
